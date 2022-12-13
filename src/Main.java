@@ -1,11 +1,9 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         task1();
         task2();
-        task3();
-        task4();
+//        task3();
+//        task4();
     }
 
     public static int[] generateRandomArray() {
@@ -29,6 +27,23 @@ public class Main {
         System.out.println();
         System.out.println();
     }
+    public static void task2() {
 
+        int[] arr = generateRandomArray();
+        int minWaste = 200_001;
+        int maxWaste = 99_999;
 
+        for (int j : arr) {
+            if (j < minWaste) {
+                minWaste = j;
+            }
+            if (j > maxWaste) {
+                maxWaste = j;
+            }
+        }
+        System.out.println("Минимальная сумма трат за день составила " + minWaste + " рублей. " +
+                "Максимальная сумма трат за день составила  " + maxWaste + " рублей");
+        System.out.println();
+        System.out.println();
+    }
 }
