@@ -48,19 +48,24 @@ public class Main {
     public static void task3() {
 
         int[] arr = generateRandomArray();
-        double summ = 0;
+        int summ = 0;
         double arithMean = 0;
 
         for (int i : arr) {
             summ += i;
-            arithMean = summ / arr.length;
+            arithMean = (summ * 1.) / arr.length;
         }
         System.out.println("Средняя сумма трат за месяц составила " + arithMean + " рублей");
+        System.out.println();
     }
 
     public static void task4() {
 
-        int[] arr = generateRandomArray();
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
+        }
 
 
     }
