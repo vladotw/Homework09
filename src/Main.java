@@ -20,8 +20,8 @@ public class Main {
         int[] arr = generateRandomArray();
         int result = 0;
 
-        for (int j : arr) {
-            result += j;
+        for (int element : arr) {
+            result += element;
         }
         System.out.println("Сумма трат за месяц составила " + result + " рублей.");
         System.out.println();
@@ -32,12 +32,12 @@ public class Main {
         int minWaste = 200_001;
         int maxWaste = 99_999;
 
-        for (int j : arr) {
-            if (j < minWaste) {
-                minWaste = j;
+        for (int element : arr) {
+            if (element < minWaste) {
+                minWaste = element;
             }
-            if (j > maxWaste) {
-                maxWaste = j;
+            if (element > maxWaste) {
+                maxWaste = element;
             }
         }
         System.out.println("Минимальная сумма трат за день составила " + minWaste + " рублей. " +
@@ -51,10 +51,10 @@ public class Main {
         int summ = 0;
         double arithMean = 0;
 
-        for (int i : arr) {
-            summ += i;
-            arithMean = (summ * 1.) / arr.length;
+        for (int element : arr) {
+            summ += element;
         }
+        arithMean = (summ * 1.) / arr.length;
         System.out.println("Средняя сумма трат за месяц составила " + arithMean + " рублей");
         System.out.println();
     }
